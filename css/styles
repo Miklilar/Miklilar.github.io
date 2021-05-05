@@ -1,19 +1,15 @@
-html {
+.html {
     font-size: 14px;
 }
 
 
-body {
+.body {
   text-align: center;
-  font-family: Mikl;
+
 }
 
-@font-face {
-    font-family: Mikl;/* Имя шрифта */
-    src: http://nelucebotari.com/fonts/wask_new_bold-webfont.woff;
-}
 
-nav {
+.nav {
     display: flex;
     justify-content: space-around;
 }
