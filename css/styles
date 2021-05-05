@@ -5,7 +5,12 @@ html {
 
 body {
   text-align: center;
-  font-family: sans-serif;
+  font-family: Mikl;
+}
+
+@font-face {
+    font-family: Mikl;/* Имя шрифта */
+    src: http://nelucebotari.com/fonts/wask_new_bold-webfont.woff;
 }
 
 nav {
