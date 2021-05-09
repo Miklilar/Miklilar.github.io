@@ -9,9 +9,9 @@
   <title>7seas</title>
 
   <!--<link rel="stylesheet" type="text/css" href="/css/styles.css"> -->
-
+	<script src="js/scripts.js"></script>
   <!--добавить адаптацию к фейсбук, инстаграмму, телеграмму-->
-  <style>
+  <style type="text/css">
   html {
       font-size:14px;
   }
@@ -26,36 +26,185 @@
       display: flex;
       justify-content: space-around;
   }
-</style>
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
+<script type="text/javascript">
+
+</script>
 </head>
 <body>
 
   <!--меню -->
-  <div> меню</div>
   <div class="parallax"></div>
-  <nav>
-      <a href="#">Home</a>
-      <a href="#">About me</a>
-      <a href="#">Contact</a>
+  <nav id="navbar">
+      <a href="#tour-search">Поиск тура</a>
+      <a href="#friends-search">Поиск попутчиков</a>
+      <a href="#contacts">Контакты</a>
   </nav>
 
-  <!--Контакты-презентация-->
-  <div>контакты</div>
-  <div class="parallax"></div>
-
-
   <!--Поиск тура-->
-  <div></div>
+
+  <div id="tour-search"><h2>Поиск тура</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dolores eius quisquam vitae, soluta suscipit cum. Reprehenderit delectus facere, autem harum eaque culpa perferendis. Vitae veniam quos ducimus illum, iure!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum qui, incidunt ipsa molestiae consequuntur laudantium dolorum, unde cum quod a porro est ad, facilis perspiciatis obcaecati. Voluptatem consectetur vero similique.</p>
+  <p>Corrupti minus qui delectus velit sapiente officia. Cumque deserunt omnis sequi blanditiis sit delectus voluptatem repellendus, illo quaerat odit nobis, veniam id sed magni rerum in accusamus numquam laudantium hic?</p>
+  <p>Officiis explicabo voluptas illum aspernatur, animi at, et quod fugit aut nam quisquam. Tenetur repellendus cupiditate, illum distinctio magnam velit aliquid, culpa tempora dicta nisi aut error, neque dolores earum.</p>
+  <p>Possimus inventore cupiditate, officia quibusdam odit nostrum laboriosam amet maiores, earum animi, deserunt modi voluptatum numquam vero! Asperiores explicabo, accusantium incidunt omnis a magni totam amet porro, veniam fugiat, quis.</p>
+  <p>Voluptatibus voluptas ipsam dolorum voluptate quisquam laudantium vel quibusdam iure recusandae architecto cumque, minima omnis eum qui iusto saepe blanditiis nam tempore est unde fugiat quasi! Repellendus, ratione aliquid earum.</p>
+  <p>Nemo fugit beatae, molestias laboriosam eligendi porro natus molestiae soluta sequi nulla accusantium quo. Sapiente ullam, hic corrupti non labore quod alias saepe blanditiis autem, ipsum aut quis ducimus consequatur!</p>
+  <p>A sequi, commodi enim repellendus recusandae voluptatibus quidem accusamus ad voluptates quaerat nemo cumque nesciunt minus quasi fugiat amet, iure ipsa omnis eaque sit incidunt dolorem. Ad natus assumenda asperiores.</p>
+  <p>Blanditiis perspiciatis dolor aliquid ea quis cumque molestiae obcaecati ipsum a. Vero earum, quo at excepturi voluptas mollitia quibusdam doloribus molestiae molestias quidem aspernatur, nam nisi. Perspiciatis, eos? Excepturi, minima.</p>
+  <p>Facere voluptatum sequi nesciunt corporis dignissimos, iure, illo reiciendis blanditiis aspernatur molestiae nisi sunt expedita amet. Ipsum cum quod repudiandae. Expedita et eum odit esse, adipisci quidem cumque molestias laborum!</p>
+  <p>Necessitatibus enim totam accusamus ut ipsam, eum reprehenderit esse delectus natus, minus nobis at quidem, corporis neque officia praesentium impedit nemo fuga sint aperiam porro non? Iure dicta veniam hic.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ab id et! Saepe nam quas laboriosam dignissimos ab incidunt in magnam ullam cumque maxime aliquam ipsa perspiciatis quae, totam, delectus!</p>
+  <p>Ea eius, praesentium fugit ipsam tenetur quam dolor eos asperiores voluptas cumque iste consequatur rem totam maiores quod laboriosam dignissimos temporibus, tempora! Eius ut placeat delectus, voluptate cupiditate atque aliquid!</p>
+  <p>Tempore assumenda accusamus, nihil maiores quis delectus aliquam, odit accusantium atque. Sunt voluptatibus impedit amet magnam doloribus ullam, laboriosam soluta ut optio repellat iusto aliquam blanditiis reiciendis dolorem, distinctio similique!</p>
+  <p>Dicta officia, dolore repellat sit aliquam facilis voluptatem nobis ullam temporibus nisi eligendi odit explicabo, vero at ut nulla possimus doloremque perspiciatis! Explicabo eaque omnis repudiandae saepe iusto itaque commodi!</p>
+  <p>Debitis quam numquam corporis, ab neque magnam provident molestiae, obcaecati nemo odit nam, quibusdam cupiditate soluta deleniti. Aspernatur laborum, quam debitis, cumque accusamus voluptate facere, tempore a ipsum laudantium atque.</p><p>Iusto rem blanditiis non, quod explicabo libero facilis illo molestiae amet maxime, praesentium quas fugiat suscipit doloribus consequuntur impedit. Quisquam dicta sint officiis accusantium nobis repellendus vero laboriosam eligendi magnam.</p>
+  <p>Sapiente voluptatum, commodi! Libero delectus nesciunt velit sequi corporis vitae, saepe modi sapiente necessitatibus officia dicta explicabo aut distinctio illo totam doloribus soluta numquam aspernatur quia, voluptates vel perferendis eveniet.</p>
+  <p>Beatae reiciendis aliquam voluptatem eligendi rerum, nobis, dolores similique consequatur natus exercitationem culpa vitae iusto officiis dignissimos magnam maiores sint soluta recusandae provident modi assumenda, doloribus, perspiciatis voluptatibus. Possimus, saepe?</p></div>
   <div class="parallax"></div>
+
 
 
   <!--поиск попутчиков-->
-  <div>поиск попутчиков</div>
+  <div id="friends-search"><h2>поиск попутчиков</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas impedit repudiandae, illo optio assumenda cumque minima, libero sed at voluptatibus debitis, quo? Rerum asperiores nihil delectus maxime tempore, vero provident.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptate ducimus perferendis a commodi distinctio, similique, facilis at vero eos alias, fugiat autem facere. Delectus cupiditate repudiandae dicta, magni in.</p>
+  <p>Vel nihil molestias deleniti excepturi, velit iusto voluptate architecto qui necessitatibus, aliquid quas dolores! Quidem eligendi, quis sed alias iusto ipsa beatae est error, natus, excepturi voluptates illo quas dolorum.</p>
+  <p>Ipsa molestiae maxime porro, sit, at odit consectetur totam iure dolorem fugit necessitatibus magnam, sapiente repellat provident. Minima esse repellendus, doloremque, mollitia, voluptatum magnam inventore a vero voluptates magni adipisci.</p>
+  <p>Magnam vitae dicta, harum fuga voluptatem exercitationem laudantium ut consequatur nisi rerum! Molestias necessitatibus, placeat deleniti corrupti dolorum sequi fuga quidem tempora blanditiis, odio hic molestiae perferendis dolores at dignissimos.</p>
+  <p>Quos, quibusdam perferendis voluptatibus aperiam vero sunt voluptates atque commodi nesciunt, ab quae, fuga eos non nihil, suscipit! Odit sit molestiae perferendis voluptas quas nobis illum, doloribus fugit officia consequuntur!</p>
+  <p>Culpa accusantium ullam nulla numquam facilis! Tempore, et quisquam asperiores saepe placeat voluptatem vitae repellendus! Voluptatum tempore omnis animi praesentium enim officia sint tempora fugit accusamus aut. Voluptas, sapiente, qui?</p>
+  <p>Dicta repellendus veniam suscipit iusto voluptates, ipsam doloremque accusantium delectus tenetur laboriosam ducimus! Deserunt repudiandae aspernatur dolorem et sint facere, veniam cum iste quo maxime iusto asperiores iure suscipit numquam.</p>
+  <p>Sint blanditiis odit magni, neque quo adipisci modi vel accusantium voluptates reiciendis voluptate natus, assumenda dolores. Voluptatibus accusantium voluptates, hic eos et dolores eligendi, officiis cum, cumque aperiam quis similique.</p>
+  <p>Rem debitis distinctio temporibus voluptas cumque at libero, sint ab omnis tenetur officia quo, iure odio ipsam adipisci porro! Voluptate beatae repellendus harum ducimus eum impedit voluptatibus non quibusdam nihil.</p>
+  <p>Accusamus molestias, itaque, corporis sit neque accusantium saepe sequi in iusto soluta aliquam veritatis ab. Ullam corporis, impedit sunt ipsam veritatis earum incidunt vel sint? Fugiat dicta nostrum, porro odit.</p><p>Vel odio cum veritatis itaque nostrum repellendus, aliquid labore quas quo blanditiis nihil, corporis, quidem explicabo. Repellendus quod, consectetur vitae voluptate. Incidunt, inventore ipsa minus ab a odio adipisci dolorum!</p>
+  <p>Blanditiis, ab commodi. Amet praesentium temporibus pariatur nobis eius, dicta iure veritatis vitae rem reiciendis error consequatur eum ipsa aperiam exercitationem enim quod. Excepturi, fugiat, eos. Molestias culpa rerum molestiae.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quam ut laboriosam provident dolor dolores voluptatum debitis. Voluptatum necessitatibus debitis minus incidunt dolorem perspiciatis voluptates facere eum repudiandae, facilis maiores.</p>
+  <p>Ut reprehenderit libero praesentium nam, sapiente aliquam, cum mollitia illum magni corporis suscipit, quis dolorem. Enim necessitatibus tempore quasi quas deserunt, aliquam tenetur, officiis a, distinctio sed fuga, rem ab.</p>
+  <p>Officia tenetur alias neque id, incidunt! Voluptate minus unde, velit possimus error dolore placeat, eum rerum provident accusamus suscipit ut sit quisquam iste expedita veniam repellendus atque quam quis fugiat.</p>
+  <p>Deleniti alias minus, accusamus aut sit quidem velit suscipit facere, totam blanditiis consectetur, error expedita. Mollitia autem, et perferendis esse nobis minus sint sequi debitis sed? Magni voluptatibus tenetur, cupiditate?</p>
+  <p>Aspernatur sapiente, saepe dignissimos eius rerum minus autem, officia beatae? Et reprehenderit quasi ut sint culpa perspiciatis, consectetur in, placeat, libero velit magnam veniam ipsam corrupti. Quia dignissimos culpa impedit.</p><p>Iure repudiandae iusto dicta officia sit sequi voluptatem sed possimus ad officiis rem corporis asperiores quam neque adipisci, harum nam repellat, quod, numquam, est autem. Reprehenderit delectus, suscipit quas similique?</p></div>
+
+  <!--Контакты-презентация-->
+  <div id="contacts"><h2>Контакты</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius vitae dolore, minima veniam quis dolorum pariatur architecto? Ducimus rem, tenetur debitis, molestias quae quia omnis quaerat enim dolore atque est.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ad ab nobis molestias. Magnam fuga, quaerat sunt quis explicabo at nulla amet, debitis temporibus quos eveniet, mollitia! Tempora sapiente, laudantium?</p>
+  <p>Sunt corporis, repudiandae. Dolorem ratione est nisi aspernatur architecto, esse quam distinctio eaque necessitatibus vitae dolorum laudantium ad quod quo debitis, accusamus ipsam commodi nemo expedita! Dicta, illo veniam pariatur.</p>
+  <p>In hic, harum eveniet explicabo temporibus, impedit commodi quod quos qui, minima excepturi assumenda illo. Autem numquam doloribus sequi voluptate quo sed aut animi beatae aperiam accusantium quidem, voluptatum adipisci.</p>
+  <p>A rerum iusto, voluptates nostrum veritatis vel porro rem dignissimos sit itaque provident laudantium assumenda harum sapiente ad fugiat distinctio minus! Neque minima, numquam porro adipisci blanditiis ea voluptatum ex.</p>
+  <p>Sunt dolore animi numquam repellat voluptatem sequi odio perspiciatis officiis expedita quam provident, a repudiandae voluptates! Illo, cum voluptatibus enim odio velit harum expedita eligendi? Fuga suscipit dolore qui cupiditate.</p>
+  <p>Optio, facilis, delectus. Culpa beatae, deserunt provident. Magni nostrum debitis praesentium qui nihil, ipsum, nisi voluptas placeat pariatur? Maiores asperiores impedit consequuntur voluptas eos assumenda fuga a, magni nemo autem!</p>
+  <p>Velit deleniti, vitae repudiandae, quidem modi harum doloribus, autem obcaecati, repellat iste dolore beatae. Deserunt nobis culpa illo delectus cum, aperiam numquam. Totam officia odit facere, dignissimos vitae nulla illo!</p>
+  <p>Fugiat ratione perspiciatis ad, eveniet eum laboriosam necessitatibus voluptates inventore est voluptatibus porro non aliquam veritatis facere provident sed consequuntur nobis sint perferendis? Neque voluptatibus nam, natus repellendus cupiditate, ad?</p>
+  <p>Voluptate sequi saepe, sapiente voluptatibus, ad laborum beatae. Rem quia iste, in, dignissimos repellendus accusamus natus recusandae reprehenderit aliquid voluptatibus voluptates placeat nemo excepturi inventore asperiores earum sit possimus magnam.</p>
+  <p>Consectetur explicabo assumenda porro qui itaque. Laudantium provident necessitatibus magni explicabo, consequatur debitis asperiores quaerat hic velit facere voluptas error aliquam harum possimus, non accusantium sed est molestiae consectetur eveniet.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla et repellat blanditiis accusantium rerum dolorem unde ab iste quas quod natus, soluta mollitia earum culpa, quisquam libero doloribus tempora minus.</p>
+  <p>Doloremque blanditiis tempora eaque aperiam veritatis, corporis atque, beatae nisi dolor? Laudantium quisquam numquam recusandae quia mollitia nemo, vel ut officia fugiat, molestias nobis quaerat odit reprehenderit dolor eligendi nam!</p>
+  <p>Sunt, esse quibusdam est facere saepe minima placeat aspernatur error asperiores nihil molestias nemo soluta minus dicta provident sit eveniet, eligendi quam velit quisquam cupiditate amet, quia. Aspernatur, est, quam!</p>
+  <p>Sint esse accusantium ad, necessitatibus exercitationem provident! Sit quam ex, earum soluta nulla dolorum delectus eligendi accusamus quasi recusandae quos tempore sint quod iste tenetur. Obcaecati, soluta ex perferendis veritatis!</p>
+  <p>Libero architecto consequatur, minus totam perspiciatis voluptatum consequuntur, porro pariatur error est accusamus distinctio perferendis eligendi eveniet quo facere corporis harum in suscipit nostrum atque consectetur ullam modi! Veniam, magnam.</p><p>Tempore modi, mollitia. Perferendis corporis earum molestias porro adipisci suscipit ratione voluptatum. Quas repellendus accusantium cumque adipisci ex inventore, ullam voluptatum, voluptatem nemo corrupti perferendis, possimus similique magnam ut distinctio!</p>
+  <p>Beatae deleniti nihil assumenda ab veritatis exercitationem voluptatem saepe rem. Dignissimos eum assumenda, sequi, tempore molestiae beatae saepe aperiam voluptatem minus placeat facilis. Dolorem sunt nihil, vitae perferendis ut placeat!</p>
+  <p >Vel itaque inventore obcaecati, magni, placeat minima vitae porro aliquam voluptate quos amet. Ad, doloribus quia harum est ipsa impedit, dolorem cum perferendis nisi ea eaque quae dolor porro repudiandae.</p> </div>
+  <div class="parallax"></div>
+
+
+
 
   <!--Подложка с контактами и ссылками в:
    тг,вайбер, инстаграмм, фейсбук-->
   <footer>подолжка</footer>
+  <script>
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+  </script>
+
+  <script>(function(window, undefined) // Code in a function to create an isolate scope
+{
+    'use strict';
+    var height_fixed_header = 0, // For layout with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
+        speed = 500,
+        moving_frequency = 200, // Affects performance ! High number makes scroll more smooth
+        links = document.getElementsByTagName('a'),
+        href;
+
+    for(var i = 0; i < links.length; i++)
+    {
+        href = (links[i].attributes.href === undefined) ? null : links[i].attributes.href.nodeValue.toString();
+        if(href !== null && href.length > 1 && href.indexOf('#') != -1) // href.substr(0, 1) == '#'
+        {
+            links[i].onclick = function()
+            {
+                var element,
+                    href = this.attributes.href.nodeValue.toString(),
+                    url = href.substr(0, href.indexOf('#')),
+                    id = href.substr(href.indexOf('#') + 1);
+                if (element = document.getElementById(id))
+                {
+
+                    var hop_count = (speed - (speed % moving_frequency)) / moving_frequency, // Always make an integer
+                        getScrollTopDocumentAtBegin = getScrollTopDocument(),
+                        gap = (getScrollTopElement(element) - getScrollTopDocumentAtBegin) / hop_count;
+
+                    if (window.history && typeof window.history.pushState == 'function')
+                        window.history.pushState({}, undefined, url + '#' + id); // Change URL for modern browser
+
+                    for (var i = 1; i <= hop_count; i++)
+                    {
+                        (function()
+                        {
+                            var hop_top_position = gap * i;
+                            setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency * i);
+                        })();
+                    }
+
+                    return false;
+                }
+            };
+        }
+    }
+
+    var getScrollTopElement =  function(e)
+    {
+        var top = height_fixed_header * -1;
+
+        while (e.offsetParent != undefined && e.offsetParent != null)
+        {
+            top += e.offsetTop + (e.clientTop != null ? e.clientTop : 0);
+            e = e.offsetParent;
+        }
+
+        return top;
+    };
+
+    var getScrollTopDocument = function()
+    {
+        return window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop !== undefined ? document.documentElement.scrollTop : document.body.scrollTop;
+    };
+})(window);</script>
 </body>
 </html>
