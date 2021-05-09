@@ -9,7 +9,97 @@
   <title>7seas</title>
 
   <!--<link rel="stylesheet" type="text/css" href="/css/styles.css"> -->
-	<script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<!--<script>
+function isVisible(tag) {
+    var t = $(tag);
+    var w = $(window);
+    var wt = w.scrollTop();
+    var tt = t.offset().top;
+    var tb = tt + t.height();
+    return ((tb <= wt + w.height()) && (tt >= wt));
+}
+
+$(function () {
+    $(window).scroll(function () {
+        var b = $("#contacts");
+        if (!b.prop("shown") && isVisible(b)) {
+            b.prop("shown", true);
+            alert("послать сигнал");
+        }
+    });
+});
+</script>   -->
+
+<script>// функция определяет нахождение элемента в области видимости
+// если элемент видно - возвращает true
+// если элемент невидно - возвращает false
+function isOnVisibleSpace(element) {
+	var bodyHeight = window.innerHeight;
+  var elemRect = element.getBoundingClientRect();
+  var offset   = elemRect.top;// - bodyRect.top;
+  if(offset<0) return false;
+  if(offset>bodyHeight) return false;
+  return true;
+}
+
+// глобальный объект с элементами, для которых отслеживаем их положение в зоне видимости
+var listenedElements = [];
+// обработчик события прокрутки экрана. Проверяет все элементы добавленные в listenedElements
+// на предмет попадания(выпадения) в зону видимости
+window.onscroll = function() {
+	listenedElements.forEach(item=>{
+    // проверяем находится ли элемент в зоне видимости
+  	var result = isOnVisibleSpace(item.el);
+
+    // если элемент находился в зоне видимости и вышел из нее
+    // вызываем обработчик выпадения из зоны видимости
+    if(item.el.isOnVisibleSpace && !result){
+    	item.el.isOnVisibleSpace = false;
+      item.outVisibleSpace(item.el);
+      return;
+    }
+    // если элемент находился вне зоны видимости и вошел в нее
+    // вызываем обработчик попадания в зону видимости
+    if(!item.el.isOnVisibleSpace && result){
+    	item.el.isOnVisibleSpace = true;
+      item.inVisibleSpace(item.el);
+      return;
+    }
+  });
+}
+
+// функция устанавливает обработчики событий
+// появления элемента в зоне видимости и
+// выхода из нее
+function onVisibleSpaceListener(elementId, cbIn, cbOut) {
+	// получаем ссылку на объект элемента
+  var el = document.getElementById(elementId);
+  // добавляем элемент и обработчики событий
+  // в массив отслеживаемых элементов
+  listenedElements.push({
+  	el: el,
+    inVisibleSpace: cbIn,
+    outVisibleSpace: cbOut
+  });
+}
+
+// устанавливаем обработчики для элемента "video"
+onVisibleSpaceListener("#contacts",
+	el=>{
+		// функция вызываемая при попадании элемента в зону видимости
+    // тут вставляем код запуска анимации
+    <!-- el.innerHTML = "1111111111contact111111"; -->
+    window.alert("элемент в зоне видимости");
+
+	},
+	el=>{
+		// функция вызываемая при выпадении элемента из зоны видимости
+    // тут вставляем код остановки анимации
+    <!--el.innerHTML = "000000000000000000000000"; -->
+    window.alert("элемент вне зоны видимости");
+	}
+);</script>
   <!--добавить адаптацию к фейсбук, инстаграмму, телеграмму-->
   <style type="text/css">
   html {
@@ -54,7 +144,7 @@
 
   <!--Поиск тура-->
 
-  <div id="tour-search"><h2>Поиск тура</h2>
+  <div tabindex="0" id="tour-search"><h2>Поиск тура</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dolores eius quisquam vitae, soluta suscipit cum. Reprehenderit delectus facere, autem harum eaque culpa perferendis. Vitae veniam quos ducimus illum, iure!</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum qui, incidunt ipsa molestiae consequuntur laudantium dolorum, unde cum quod a porro est ad, facilis perspiciatis obcaecati. Voluptatem consectetur vero similique.</p>
   <p>Corrupti minus qui delectus velit sapiente officia. Cumque deserunt omnis sequi blanditiis sit delectus voluptatem repellendus, illo quaerat odit nobis, veniam id sed magni rerum in accusamus numquam laudantium hic?</p>
@@ -77,7 +167,7 @@
 
 
   <!--поиск попутчиков-->
-  <div id="friends-search"><h2>поиск попутчиков</h2>
+  <div tabindex="0" id="friends-search"><h2>поиск попутчиков</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas impedit repudiandae, illo optio assumenda cumque minima, libero sed at voluptatibus debitis, quo? Rerum asperiores nihil delectus maxime tempore, vero provident.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptate ducimus perferendis a commodi distinctio, similique, facilis at vero eos alias, fugiat autem facere. Delectus cupiditate repudiandae dicta, magni in.</p>
   <p>Vel nihil molestias deleniti excepturi, velit iusto voluptate architecto qui necessitatibus, aliquid quas dolores! Quidem eligendi, quis sed alias iusto ipsa beatae est error, natus, excepturi voluptates illo quas dolorum.</p>
@@ -97,7 +187,7 @@
   <p>Aspernatur sapiente, saepe dignissimos eius rerum minus autem, officia beatae? Et reprehenderit quasi ut sint culpa perspiciatis, consectetur in, placeat, libero velit magnam veniam ipsam corrupti. Quia dignissimos culpa impedit.</p><p>Iure repudiandae iusto dicta officia sit sequi voluptatem sed possimus ad officiis rem corporis asperiores quam neque adipisci, harum nam repellat, quod, numquam, est autem. Reprehenderit delectus, suscipit quas similique?</p></div>
 
   <!--Контакты-презентация-->
-  <div id="contacts"><h2>Контакты</h2>
+  <div  id="contacts"><h2>Контакты</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius vitae dolore, minima veniam quis dolorum pariatur architecto? Ducimus rem, tenetur debitis, molestias quae quia omnis quaerat enim dolore atque est.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ad ab nobis molestias. Magnam fuga, quaerat sunt quis explicabo at nulla amet, debitis temporibus quos eveniet, mollitia! Tempora sapiente, laudantium?</p>
   <p>Sunt corporis, repudiandae. Dolorem ratione est nisi aspernatur architecto, esse quam distinctio eaque necessitatibus vitae dolorum laudantium ad quod quo debitis, accusamus ipsam commodi nemo expedita! Dicta, illo veniam pariatur.</p>
@@ -146,8 +236,8 @@ function myFunction() {
   <script>(function(window, undefined) // Code in a function to create an isolate scope
 {
     'use strict';
-    var height_fixed_header = 0, // For layout with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
-        speed = 500,
+    var height_fixed_header = 16, // For layout with header with position:fixed. Write here the height of your header for your anchor don't be hiden behind
+        speed = 1000,
         moving_frequency = 200, // Affects performance ! High number makes scroll more smooth
         links = document.getElementsByTagName('a'),
         href;
@@ -206,5 +296,13 @@ function myFunction() {
         return window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop !== undefined ? document.documentElement.scrollTop : document.body.scrollTop;
     };
 })(window);</script>
+<script>
+$(document).scroll(function () {
+    s_top = $("body").scrollTop();
+    yes = $("#contacts").offset().top;
+    if(s_top > yes){
+        console.log("Yes");
+    }
+});</script>
 </body>
 </html>
