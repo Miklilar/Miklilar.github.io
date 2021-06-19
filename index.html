@@ -205,7 +205,43 @@ onVisibleSpaceListener("#contacts",
   <p>Libero architecto consequatur, minus totam perspiciatis voluptatum consequuntur, porro pariatur error est accusamus distinctio perferendis eligendi eveniet quo facere corporis harum in suscipit nostrum atque consectetur ullam modi! Veniam, magnam.</p><p>Tempore modi, mollitia. Perferendis corporis earum molestias porro adipisci suscipit ratione voluptatum. Quas repellendus accusantium cumque adipisci ex inventore, ullam voluptatum, voluptatem nemo corrupti perferendis, possimus similique magnam ut distinctio!</p>
   <p>Beatae deleniti nihil assumenda ab veritatis exercitationem voluptatem saepe rem. Dignissimos eum assumenda, sequi, tempore molestiae beatae saepe aperiam voluptatem minus placeat facilis. Dolorem sunt nihil, vitae perferendis ut placeat!</p>
   <p >Vel itaque inventore obcaecati, magni, placeat minima vitae porro aliquam voluptate quos amet. Ad, doloribus quia harum est ipsa impedit, dolorem cum perferendis nisi ea eaque quae dolor porro repudiandae.</p> </div>
-  <div class="parallax"></div>
+  <div class="w-form contact-form">
+        <form method="post" action="http://www.nelucebotari.com/formmail.php" id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form">
+          <div class="form-bg">
+
+          <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER">
+          <input type="hidden" name="recipients" value="me&amp;george@nelucebotari.com">
+          <input type="hidden" name="good_url" value="http://nelucebotari.com/success.html">
+          <input type="hidden" name="bad_url" value="http://nelucebotari.com/failure.html">
+
+            <label for="My-name-is" class="field-label">Привет, меня зовут</label>
+            <input id="My-name-is" type="text" placeholder="John Doe" name="My-name-is" data-name="My name is" class="w-input text-field">
+            <label for="I-am-looking-for-help-with-a" class="field-label">.
+              <br>Хочу поехать в страну</label>
+            <input id="I-am-looking-for-help-with-a" type="text" placeholder="website, mobile app, logo..." name="I-am-looking-for-help-with-a" data-name="I am looking for help with a" required="required" class="w-input text-field job">
+            <label for="My-budget-is" class="field-label">. Бюджет такой $</label>
+            <input id="My-budget-is" type="text" placeholder="2000" name="My-budget-is" data-name="My budget is $" class="w-input text-field budget">
+            <label for="I-need-it-done-by" class="field-label">Такие вот даты</label>
+            <input id="I-need-it-done-by" type="text" placeholder="January 15th" name="I-need-it-done-by" data-name="I need it done by" required="required" class="w-input text-field date">
+            <label for="Please-contact-me-at" class="field-label">. Мои контакты</label>
+            <input id="Please-contact-me-at" type="email" placeholder="john@doe.com" name="Please-contact-me-at" data-name="Please contact me at" required="required" class="w-input text-field date">
+            <label for="I-need-it-done-by" class="field-label">.
+              <br>Thank you!</label>
+          </div>
+          <div data-ix="button" class="button form">
+            <div class="button-shadow"></div>
+            <input type="submit" value="Submit" data-wait="Please wait..." class="w-button button-text">
+          </div>
+        </form>
+        <div class="w-form-done success">
+          <div class="success-bg">
+            <p class="success-p">Thank you! Your submission has been received!</p>
+          </div>
+        </div>
+        <div class="w-form-fail error">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div><div class="parallax"></div>
 
 
 
