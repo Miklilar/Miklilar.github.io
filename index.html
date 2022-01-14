@@ -6,16 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
 
-  
+
 
 
 </head>
 <body>
 
 
+ <form>
+  <p><b>Введи текст со звёздочками:</b></p>
+  <p><textarea id="text-input" style=""></textarea></p>
+
+ </form>
+
+ <button onclick="textModificator()">Заменить на не звёздочки!</button>
+  <div>
+    <h3> Текст без звёздочек: </h3>
+    <pre id="text-output"> </pre>
+  </div>
+
+<script>
+function textModificator() {
+  const oldText = document.getElementById('text-input').value;
+  document.getElementById("text-output").textContent = oldText.replace(/\*/g, "⭐️");
+}
+</script>
 
 
-  
 
 
 
